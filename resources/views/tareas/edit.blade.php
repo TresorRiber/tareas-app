@@ -7,8 +7,9 @@
 </head>
 <body>
     <h1>Editar tareas</h1>
-    <form action="/tareas/update/{{ $tarea->id }}" method="put">
+    <form action="/tareas/update/{{ $tarea->id }}" method="post">
         @csrf
+        @method('put')
         <ul>
         <input type="text" name='titulo' value="{{ $tarea->titulo }}" >
         <input type="text" name='descripcion' value="{{ $tarea->descripcion }}" >

@@ -41,7 +41,8 @@ class TareaController extends Controller
         $tarea->save();
         return redirect('/tareas/index');
     }
-    public function destroy($id){
-
+    public static function destroy($id){
+        $tarea = Tarea::find($id)->delete();
+        return redirect('/tareas/index');
     }
 }

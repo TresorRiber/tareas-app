@@ -9,7 +9,7 @@
     <h1>Lista trabajadores</h1>
     <ul>
         @foreach ($trabajadores as $trabajador)
-            <li>{{ $trabajador->nombre }} {{ $trabajador->apellido }}</li>
+            <li><a href="/trabajadores/show/{{ $trabajador->id }}">{{ $trabajador->nombre }} {{ $trabajador->apellido }}</a></li>
         @endforeach
     </ul>
     <a href="create">Añadir trabajador</a>
